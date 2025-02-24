@@ -1,15 +1,21 @@
 import Link from 'next/link';
+import styled from 'styled-components';
+
+const StyledHeader = styled.header`
+	background-color: #222;
+`;
 
 export default function Header() {
-	return;
-	<header>
-		<Link href={'/'}>Ecomerciantul</Link>
-		<nav>
-			<Link href={'/'}>Home</Link>
-			<Link href={'/products'}>All products</Link>
-			<Link href={'/categories'}>Categories</Link>
-			<Link href={'/account'}>Account</Link>
-			<Link href={'/cart'}>Cart (0)</Link>
-		</nav>
-	</header>;
+	return (
+		<StyledHeader>
+			<Link href={'/'}>Ecomerciantul</Link>
+			<nav>
+				<Link href={'/'}>Home</Link>
+				<Link href={'/products'}>All products</Link>
+				<Link href={'/categories'}>Categories</Link>
+				<Link href={'/account'}>Account</Link>
+				<Link href={'/cart'}>Cart (0)</Link>
+			</nav>
+		</StyledHeader>
+	);
 }
