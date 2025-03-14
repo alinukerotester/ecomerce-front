@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import Center from './Center';
 
 const StyledHeader = styled.header`
 	background-color: #222;
