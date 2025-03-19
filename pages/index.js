@@ -1,5 +1,6 @@
 import Featured from '@/components/Featured';
 import Header from '@/components/Header';
+import { mongooseConnect } from '@/lib/mongoose';
 import { Product } from '@/models/Product';
 
 export default function HomePage({ product }) {
@@ -11,7 +12,7 @@ export default function HomePage({ product }) {
 	);
 }
 
-export async function getServersideProps() {
+export async function getServerSideProps() {
 	const featuredProductId = '67613e79a0c0e31167663878';
 	await mongooseConnect();
 	const product = await Product.findById(featuredProductId);

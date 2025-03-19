@@ -18,7 +18,7 @@ const Desc = styled.p`
 `;
 const ColumnsWrapper = styled.div`
 	display: grid;
-	grid-template-columns: 0.9fr 1.1fr;
+	grid-template-columns: 1.1fr 0.9fr;
 	gap: 40px;
 	img {
 		max-width: 100%;
@@ -41,8 +41,8 @@ export default function Featured({ product }) {
 				<ColumnsWrapper>
 					<Column>
 						<div>
-							<Title>{product}</Title>
-							<Desc>Get the pro experience with our new Pro plan</Desc>
+							<Title>{product.title}</Title>
+							<Desc>{product.description}</Desc>
 							<ButtonsWrapper>
 								<Button outline white>
 									Read more
