@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Center from './Center';
-import PrimaryBtn from './PrimaryBtn';
+import Button from './Button';
 
 const Bg = styled.div`
 	background-color: #222;
@@ -38,7 +38,7 @@ export default function Featured() {
 							<Title>Pro anywhere</Title>
 							<Desc>Get the pro experience with our new Pro plan</Desc>
 							<button>Read more</button>
-							<PrimaryBtn>Add to cart</PrimaryBtn>
+							<Button size='l'>Add to cart</Button>
 						</div>
 					</Column>
 					<Column>
