@@ -6,7 +6,7 @@ export default function HomePage({ product }) {
 	return (
 		<div>
 			<Header />
-			<Featured />
+			<Featured product={product} />
 		</div>
 	);
 }
@@ -17,7 +17,7 @@ export async function getServersideProps() {
 	const product = await Product.findById(featuredProductId);
 	return {
 		props: {
-			product,
+			product: JSON.parse(JSON.stringify(product)),
 		},
 	};
 }
