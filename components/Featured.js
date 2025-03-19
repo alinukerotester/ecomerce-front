@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import Center from './Center';
+import PrimaryBtn from './PrimaryBtn';
 
 const Bg = styled.div`
 	background-color: #222;
@@ -37,16 +38,14 @@ export default function Featured() {
 							<Title>Pro anywhere</Title>
 							<Desc>Get the pro experience with our new Pro plan</Desc>
 							<button>Read more</button>
-							<button>Add to cart</button>
+							<PrimaryBtn>Add to cart</PrimaryBtn>
 						</div>
 					</Column>
 					<Column>
-						<a href='https://next-ecomercity-alinukes.s3.amazonaws.com/1742379958228.webp'>
-							<img
-								src='https://next-ecomercity-alinukes.s3.amazonaws.com/1742379958228.webp'
-								alt='Imagine S3'
-							/>
-						</a>
+						<img
+							src='https://next-ecomercity-alinukes.s3.amazonaws.com/1742379958228.webp'
+							alt='Imagine S3'
+						/>
 					</Column>
 				</Wrapper>
 			</Center>
