@@ -1,7 +1,3 @@
-export default function ProductBox() {
-	return (
-		<div>
-			<h1>Product Box</h1>
-		</div>
-	);
+export default function ProductBox({ _id, title, description, price }) {
+	return <div>{title}</div>;
 }
