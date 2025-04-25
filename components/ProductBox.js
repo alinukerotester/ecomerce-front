@@ -53,8 +53,8 @@ export default function ProductBox({ _id, title, description, price, images }) {
 				<Title>{title}</Title>
 				<PriceRow>
 					<Price>${price}</Price>
-					<Button primary>
-						<CartIcon />
+					<Button primary outline>
+						Add to cart
 					</Button>
 				</PriceRow>
 			</ProductInfoBox>

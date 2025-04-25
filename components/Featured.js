@@ -52,7 +52,7 @@ export default function Featured({ product }) {
 									white={1}>
 									Read more
 								</ButtonLink>
-								<Button primary>
+								<Button white>
 									<CartIcon />
 									Add to cart
 								</Button>
