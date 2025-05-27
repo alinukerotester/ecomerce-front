@@ -35,14 +35,29 @@ export default function CartPage() {
 			<Center>
 				<ColumnsWrapper>
 					<Box>
+						<h2>Cart</h2>
 						{!cartProducts?.length && <div>Your cart is empty</div>}
 						{products?.length > 0 && (
-							<>
-								<h2>Cart</h2>
-								{products.map((product) => (
-									<div>{product.title}</div>
-								))}
-							</>
+							<table>
+								<thead>
+									<tr>
+										<th>Product</th>
+										<th>Quantity</th>
+										<th>Price</th>
+									</tr>
+								</thead>
+								<tbody>
+									{products.map((product) => (
+										<tr>
+											<td>{product.title}</td>
+											<td>
+												{cartProducts.filter((id) => id === product._id).length}
+											</td>
+											<td>price</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
 						)}
 					</Box>
 					{!!cartProducts?.length && (
