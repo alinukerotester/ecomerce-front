@@ -92,6 +92,22 @@ export default function CartPage() {
 		const price = products.find((p) => p._id === productId)?.price || 0;
 		total += price;
 	}
+
+	if (window.location.href.includes('success')) {
+		return (
+			<>
+				<Header />
+				<Center>
+					<ColumnsWrapper>
+						<Box>
+							<h1>Thanks for your order !</h1>
+							<p>We will email you when your order will be sent !</p>
+						</Box>
+					</ColumnsWrapper>
+				</Center>
+			</>
+		);
+	}
 	return (
 		<>
 			<Header />
