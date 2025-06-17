@@ -2,6 +2,7 @@ import Button from '@/components/Button';
 import { CartContext } from '@/components/CartContext';
 import Center from '@/components/Center';
 import Header from '@/components/Header';
+import Table from '@/components/Table';
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
@@ -38,7 +39,7 @@ export default function CartPage() {
 						<h2>Cart</h2>
 						{!cartProducts?.length && <div>Your cart is empty</div>}
 						{products?.length > 0 && (
-							<table>
+							<Table>
 								<thead>
 									<tr>
 										<th>Product</th>
@@ -57,7 +58,7 @@ export default function CartPage() {
 										</tr>
 									))}
 								</tbody>
-							</table>
+							</Table>
 						)}
 					</Box>
 					{!!cartProducts?.length && (
