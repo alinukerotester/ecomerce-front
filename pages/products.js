@@ -1,5 +1,6 @@
 import Center from '@/components/Center';
 import Header from '@/components/Header';
+import ProductsGrid from '@/components/ProductsGrid';
 import { mongooseConnect } from '@/lib/mongoose';
 import { Product } from '@/models/Product';
 import styled from 'styled-components';
@@ -14,7 +15,7 @@ export default function ProductsPage(products) {
 			<Header />
 			<Center>
 				<Title>All products</Title>
-				{products?.length}
+				<ProductsGrid products={products} />
 			</Center>
 		</>
 	);
