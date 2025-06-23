@@ -9,7 +9,7 @@ const Title = styled.h1`
 	font-size: 1.5em;
 `;
 
-export default function ProductsPage(products) {
+export default function ProductsPage({ products }) {
 	return (
 		<>
 			<Header />
