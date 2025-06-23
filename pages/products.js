@@ -8,12 +8,13 @@ const Title = styled.h1`
 	font-size: 1.5em;
 `;
 
-export default function ProductsPage() {
+export default function ProductsPage(products) {
 	return (
 		<>
 			<Header />
 			<Center>
 				<Title>All products</Title>
+				{products?.length}
 			</Center>
 		</>
 	);
@@ -21,9 +22,10 @@ export default function ProductsPage() {
 
 export async function getServerSideProps() {
 	await mongooseConnect();
+	const products = await Product.find({}, null, { sort: { _id: -1 } });
 	return {
 		props: {
-			products: Product,
+			products: JSON.parse(JSON.stringify(products)),
 		},
 	};
 }

@@ -5,7 +5,7 @@ import ProductBox from './ProductBox';
 const ProductsGrid = styled.div`
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
-	gap: 15px;
+	gap: 20px;
 `;
 
 const Title = styled.h2`
