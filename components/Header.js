@@ -24,6 +24,18 @@ const NavLink = styled(Link)`
 	color: #aaa;
 	text-decoration: none;
 `;
+const NavButton = styled.button`
+	background: none;
+	border: none;
+	color: #aaa;
+	cursor: pointer;
+	font: inherit;
+	padding: 0;
+	margin: 0;
+	&:hover {
+		color: #fff;
+	}
+`;
 
 export default function Header() {
 	const { cartProducts } = useContext(CartContext);
@@ -39,6 +51,7 @@ export default function Header() {
 						<NavLink href={'/account'}>Account</NavLink>
 						<NavLink href={'/cart'}>Cart ({cartProducts.length})</NavLink>
 					</StyledNav>
+					<NavButton onClick={() => alert('Logged out!')}>Logout</NavButton>
 				</Wrapper>
 			</Center>
 		</StyledHeader>
