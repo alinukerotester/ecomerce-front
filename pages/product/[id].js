@@ -1,5 +1,6 @@
 import Center from '@/components/Center';
 import Header from '@/components/Header';
+import ProductImages from '@/components/ProductImages';
 import Title from '@/components/Title';
 import WhiteBox from '@/components/WhiteBox';
 import { mongooseConnect } from '@/lib/mongoose';
@@ -20,11 +21,7 @@ export default function ProductPage({ product }) {
 			<Center>
 				<ColWrapper>
 					<WhiteBox>
-						<img
-							style={{ maxWidth: '10%' }}
-							src={product.images?.[0]}
-							alt={product.title}
-						/>
+						<ProductImages images={product.images} />
 					</WhiteBox>
 					<div>
 						<Title>{product.title}</Title>

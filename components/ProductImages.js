@@ -1,3 +1,7 @@
-export default function ProductImages() {
-	return <div>{/* Product images will be displayed here */}</div>;
+export default function ProductImages({ images, title }) {
+	return (
+		<>
+			<img style={{ maxWidth: '100%' }} src={images?.[0]} alt={title} />
+		</>
+	);
 }
